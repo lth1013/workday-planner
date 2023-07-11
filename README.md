@@ -36,7 +36,7 @@ This website enables you to create a calendar of events for your 9-5 workday. It
 
 To use this website, enter in the tasks you need to do for your workday. Then, click the button to the side of each bar to save. Then on reload, they will still be there.
 
-![Screenshot](./Assets/images/screenshot2.png)
+![Screenshot](./screenshot2.png)
 
 
 
