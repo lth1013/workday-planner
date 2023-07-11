@@ -30,7 +30,7 @@ THEN the text for that event is saved in local storage
 WHEN I refresh the page
 THEN the saved events persist
 
-This website enables you to create a calendar of events for your 9-5 workday. It has different colors depending on the time, and you can save events. It also displays the current day.
+This website enables you to create a calendar of events for your 9-5 workday. It has different colors depending on the time, and you can save events. It displays the current day.
 
 ## Usage 
 
