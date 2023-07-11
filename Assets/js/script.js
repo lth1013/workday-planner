@@ -1,6 +1,7 @@
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
+//sets day js format, current day also
 $('#currentDay').text(dayjs().format('MM/DD/YYYY'))
 
 $(function () {
@@ -25,14 +26,34 @@ $(function () {
         }
     })
 };
+
 //event listener when savebtn is clicked
 $('.saveBtn').on("click", function() {
   //grabs time from hour class of specicic timeBlock when btn is clicked
     var time = $(this).siblings(".hour").text();
     //grabs text from description class for each
     var description = $(this).siblings(".description").val();
-
+    //sets time and description to local storage
     localStorage.setItem(time, description);
 });
+
+function saveInput() {
+
+    console.log(saveInput); 
+    //each function for hour class
+    $(".hour").each(function() {
+        //currentHour is set to the text of the hour class
+        var currentHour = $(this).text();
+        //currData is set to the local storage of the currentHour
+        var currData = localStorage.getItem(currentHour);
+        //if currData is not null, the description class is set to the currData
+        if(currData !== null) {
+            $(this).siblings(".description").val(currData);
+        }
+    });
+}
+//calls functions
+timeBlock();
+saveInput();
 
 });
